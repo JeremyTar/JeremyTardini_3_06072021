@@ -1,108 +1,17 @@
-/* Variable couleur */
-/* MIXIN */
-* {
-  margin: 0;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 2 | @import "./base/Font-face.scss";
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass\style.scss 2:9  root stylesheet */
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import \"./base/Font-face.scss\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\style.scss 2:9  root stylesheet";
 }
-header .header__localisation {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 50px;
-  width: 100%;
-  background-color: #CECECE;
-  border-top: solid 2px grey;
-}
-header .header__localisation p i {
-  padding: 10px;
-}
-header img {
-  margin: 5%;
-}
-
-.section__information {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  width: 100%;
-  background-color: #F6F6F6;
-}
-.section__information h1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  justify-content: center;
-  width: 70%;
-  margin: 10px;
-}
-.section__information p {
-  width: 70%;
-  margin: 10px;
-}
-.section__information button {
-  width: 200px;
-  height: 40px;
-  margin: 10px;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border-radius: 25px;
-  color: white;
-  border: none;
-  box-shadow: 0.3px 0.3px 2px black;
-}
-
-aside {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0 20px 0;
-}
-aside h1 {
-  width: 100%;
-  padding-left: 15px;
-}
-
-.fonctionnement__vignette {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
-  border-radius: 18px;
-  box-shadow: 0.3px 0.3px 2px black;
-  background-color: #F6F6F6;
-  box-sizing: content-box;
-}
-.fonctionnement__vignette p {
-  color: #FF79DA;
-}
-
-article {
-  background-color: #F6F6F6;
-}
-article .article__organisation {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-article .vignette__restaurant {
-  width: 310px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-}
-article .vignette__restaurant img {
-  object-fit: cover;
-  width: 100%;
-  height: 75%;
-}
-article .vignette__restaurant__text {
-  display: flex;
-  justify-content: space-between;
-}
-
-/*# sourceMappingURL=style.css.map */

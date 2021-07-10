@@ -1,0 +1,14 @@
+
+@mixin gradient-button {
+    border-radius: 25px;
+    color: white;
+    border: none;
+    box-shadow: 0.3px 0.3px 2px black;
+}
+
+@mixin border-shadow-color($colour) {
+    border-radius: 18px;
+    box-shadow: 0.3px 0.3px 2px black;
+    background-color: $colour;
+
+}
