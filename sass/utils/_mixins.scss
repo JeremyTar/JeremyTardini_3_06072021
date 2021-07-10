@@ -1,0 +1,18 @@
+
+@mixin gradient-button {
+    width: 200px;
+    height: 40px;
+    background-image:linear-gradient(to bottom right, $secondaire-color, $primaire-color);
+    border-radius: 25px;
+    color: white;
+    border: none;
+    box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.20);
+}
+
+@mixin vignette__border--color($colour) {
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.20);
+    background-color: $colour;
+    border: none;
+
+}
