@@ -31,6 +31,7 @@ h1 {
 
 h2 {
   font-family: "Roboto--Medium";
+  font-size: 95%;
 }
 
 h3 {
@@ -41,6 +42,12 @@ h3 {
 h4 {
   font-family: "Roboto--Thin";
   font-size: 95%;
+}
+
+p {
+  font-family: "Roboto--Light";
+  font-size: 80%;
+  font-weight: 400;
 }
 
 header {
@@ -82,6 +89,7 @@ header img {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
   height: 200px;
   width: 100%;
   background-color: #F0F0F0;
@@ -114,47 +122,44 @@ aside {
 aside h1 {
   width: 100%;
   padding-left: 15px;
+  margin: 5px;
 }
 aside .fonctionnement {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-around;
+  margin: 5px;
 }
 aside .fonctionnement .fonctionnement__row {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin: 10px 5px 10px 5px;
-  width: 300px;
-}
-aside .fonctionnement .fonctionnement__row .fonctionnement__row__vignette {
-  width: 90%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  width: 95%;
+  height: 50px;
+  margin: 5px;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: #F0F0F0;
   border: none;
 }
-aside .fonctionnement .fonctionnement__row .fonctionnement__row__vignette p {
-  text-align: center;
-  margin-top: 15px;
-  margin-left: -10px;
-  height: 20px;
-  width: 20px;
-  border-radius: 18px;
+aside .fonctionnement .fonctionnement__row p {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: space-around;
+  padding: 1px;
+  margin-left: -5px;
+  border-radius: 15px;
   background-color: #9356DC;
   color: white;
-  font-family: "Roboto--Medium";
-  font-size: 80%;
 }
-aside .fonctionnement .fonctionnement__row .fonctionnement__row__vignette h2 {
-  font-size: 80%;
-  padding: 6% 5% 6% 5%;
+aside .fonctionnement .fonctionnement__row i {
+  width: 10%;
+  display: flex;
+  justify-content: center;
 }
-aside .fonctionnement .fonctionnement__row .fonctionnement__row__vignette i {
-  padding: 6% 5% 6% 5%;
+aside .fonctionnement .fonctionnement__row h2 {
+  width: 80%;
+  margin: 15px;
 }
 
 article {

@@ -16,6 +16,7 @@ h1
 h2
 {
     font-family: 'Roboto--Medium';
+    font-size: 95%
 }
 h3
 {
@@ -26,6 +27,12 @@ h4
 {
     font-family: 'Roboto--Thin';
     font-size: 95%;
+}
+p
+{
+    font-family: 'Roboto--Light';
+    font-size: 80%;
+    font-weight: 400;
 }
 
 
@@ -73,6 +80,7 @@ header
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     height: 200px;
     width: 100%;
     background-color: $light-background;
@@ -103,49 +111,45 @@ aside
     & h1 {
         width: 100%;
         padding-left: 15px;
+        margin: 5px;
     }
-    & .fonctionnement {
+    .fonctionnement {
+
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        .fonctionnement__row {
+        justify-content: space-around;
+        margin: 5px;
+        .fonctionnement__row{
             display: flex;
-            justify-content: space-around;
             align-items: center;
-            margin: 10px 5px 10px 5px;
-            width: 300px;
-            .fonctionnement__row__vignette {
-                width: 90%;
+            width: 95%;
+            height: 50px;
+            margin: 5px;
+            @include vignette__border--color($light-background);
+            & p {
+                width: 16px;
+                height: 16px;
                 display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                @include vignette__border--color($light-background);
-                & p{
-                    text-align: center ;
-                    margin-top: 15px;
-                    margin-left: -10px;
-                    height: 20px;
-                    width: 20px;
-                    border-radius: 18px;
-                    background-color: $primaire-color;
-                    color: white;
-                    font-family: 'Roboto--Medium';
-                    font-size: 80%;
-                }
-                & h2{
-                    font-size: 80%;
-                    padding: 6% 5% 6% 5%;
-                }
-                & i {
-                    padding: 6% 5% 6% 5%
-                }
-
+                justify-content: space-around;
+                padding: 1px;
+                margin-left: -5px;
+                border-radius: 15px;
+                background-color: #9356DC;
+                color: white;
+            }
+            & i {
+                width: 10%;
+                display: flex;
+                justify-content: center;
+                
+            }
+            & h2 {
+                width: 80%;
+                margin: 15px;
             }
         }
     }
 }
-
-
 
 
 
