@@ -107,6 +107,15 @@ footer ul li i {
   width: 20px;
 }
 
+@media screen and (min-width: 500px) {
+  footer footer h1 {
+    text-align: center;
+  }
+  footer footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 article {
   display: flex;
   flex-direction: column;
