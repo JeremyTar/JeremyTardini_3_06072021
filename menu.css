@@ -82,6 +82,7 @@ header h1 {
 
 /* FOOTER REUTILISABLE */
 footer {
+  width: 100%;
   background-color: #3E3E3E;
   color: white;
 }
@@ -96,6 +97,10 @@ footer ul {
   list-style: none;
   padding: 0 0 15px 15px;
   line-height: 30px;
+  width: 100%;
+}
+footer ul li {
+  width: 200px;
 }
 footer ul li a {
   color: white;
@@ -110,6 +115,8 @@ footer ul li i {
 @media screen and (min-width: 500px) {
   footer footer h1 {
     text-align: center;
+    display: flex;
+    justify-content: space-around;
   }
   footer footer ul {
     display: flex;
