@@ -106,6 +106,9 @@ footer ul li i {
 header .Menu__lien {
   display: none;
 }
+header .Menu__lien #icone_-fleche {
+  display: none;
+}
 
 /* Barre localisation */
 .localisation {
