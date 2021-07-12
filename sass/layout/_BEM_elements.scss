@@ -1,5 +1,7 @@
 
+
 /* HEADER REUTILISABLE */
+
 
 header
 {
@@ -7,7 +9,7 @@ header
     align-items: center;
     justify-content:space-around ;
     width: 100%;
-    height: 80px;
+    height: 70px;
     a {
         position: absolute;
         left: 20px;
@@ -19,12 +21,14 @@ header
         text-align: center;
         margin: 10px 0 10px 0;
         box-sizing: content-box;
-        font-size: 3em;
+        font-size: 2.5em;
+        font-weight: 500;
     }
 }
 
 
 /* FOOTER REUTILISABLE */
+
 
 footer
 {
@@ -32,17 +36,19 @@ footer
     color: white;
     & h1 {
     font-family: 'Shrikhand';
-    font-size: 100%;
+    font-size: 1.5em;
     padding: 15px 0 10px 15px;
+    font-weight: 500;
     }
     & ul {
-        font-family: 'Roboto--Thin';
+        font-family: 'Roboto--Light';
         list-style: none;
         padding: 0 0 15px 15px;
+        line-height: 30px;
         & li a {
             color: white;
             text-decoration: none;
-
+            font-weight: 500;
         }
         & li i {
             margin : 0 5px 0 0;

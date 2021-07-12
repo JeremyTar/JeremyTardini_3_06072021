@@ -7,6 +7,13 @@
     color: white;
     border: none;
     box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.20);
+    font-family: 'Roboto--Medium';
+    font-size: 0.8em;
+}
+@mixin gradient--hover {
+    opacity: 0.8;
+    transition: 0.3s;
+    box-shadow: 5px 5px 17px -4px #050505;
 }
 
 @mixin vignette__border--color($colour) {
@@ -14,5 +21,39 @@
     box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.20);
     background-color: $colour;
     border: none;
+}
+@mixin vignette__border--color--hover { 
+    background-color: darken($light-background, 10%);
+    transition: 0.5s;
+    i {
+        color: $primaire-color;
+    }
+}
 
+@mixin vignette__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 400px;
+    height: 70px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.20);
+    background-color: $white-background;
+    border: none;
+}
+
+@mixin card_nouveau {
+    content: "Nouveau";
+    position: relative;
+    top: 7.5%;
+    left: 70%;
+    background-color: #99E2D0;
+    color: #369976;
+    font-family: 'Roboto--Bold';
+    width: 80px;
+    height: 25px;
+    padding-top: 5px;
+    text-align: center;
+    border-radius: 5px;
 }
