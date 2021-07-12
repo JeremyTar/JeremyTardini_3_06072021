@@ -1,0 +1,45 @@
+
+/* HEADER REUTILISABLE */
+
+header
+{
+    display: flex;
+    width: 100%;
+    & a {
+        margin: auto auto auto 6%;
+    }
+    & h1 {
+        font-family: "Shrikhand";
+        text-align: center;
+        width: 100%;
+        margin: 10px 0 10px -6%;
+    }
+}
+
+
+/* FOOTER REUTILISABLE */
+
+footer
+{
+    background-color: $black-background;
+    color: white;
+    & h1 {
+    font-family: 'Shrikhand';
+    font-size: 100%;
+    padding: 15px 0 10px 15px;
+    }
+    & ul {
+        font-family: 'Roboto--Thin';
+        list-style: none;
+        padding: 0 0 15px 15px;
+        & li a {
+            text-decoration: none;
+            color: white;
+
+        }
+        & li i {
+            margin : 0 5px 0 0;
+            width: 20px;
+        }
+    }
+}
