@@ -10,6 +10,7 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+    box-sizing: border-box;
 }
 
 h1
@@ -37,7 +38,10 @@ p
     font-size: 80%;
     font-weight: 400;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 
 /* SECTION */
 
@@ -69,21 +73,24 @@ p
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    height: 200px;
     width: 100%;
     background-color: $light-background;
     padding: 25px 0 25px 0;
     & h1{
         display: flex;
+        justify-content: space-around ;
         width: 70%;
+        margin: 10px 0 10px 0;
     }
     & h4{
         width: 70%;
+        margin: 10px 0 10px 0;
     }
     & button
     {
         @include gradient-button;
         font-family: 'Roboto--Medium';
+        margin: 10px 0 10px 0;
     }
 }
 
@@ -97,22 +104,21 @@ aside
     flex-direction: column;
     margin: 20px 0 20px 0;
     & h1 {
-        width: 100%;
-        padding-left: 15px;
-        margin: 5px;
+        width: 95%;
+        margin: auto;
     }
     .fonctionnement {
 
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin: 5px;
         .fonctionnement__row{
             display: flex;
             align-items: center;
             width: 95%;
+            max-width: 400px;
             height: 50px;
-            margin: 5px;
+            margin: 10px;
             @include vignette__border--color($light-background);
             & p {
                 width: 16px;
@@ -145,40 +151,41 @@ aside
 article{
     background-color: $light-background;
     & h1 {
-        width: 100%;
-        padding-left: 15px;
+        width: 95%;
+        margin: auto;
     }
     .article__organisation {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    & .vignette__restaurant {
-        min-width: 300px;
-        height: 200px;
-        display: flex;
         flex-wrap: wrap;
-        justify-items: center;
-        box-sizing: content-box;
-        flex-direction: column;
-        margin: 2%;
-        padding: 0;
-        @include vignette__border--color($white-background);
-        & img{
-            object-fit: cover;
-            width: 100%;
-            max-width: 400px;
+        justify-content: space-around;
+        width: 100%;
+        .vignette__restaurant {
+            z-index: auto;
             min-width: 300px;
-            height: 75%;
-            border-radius: 18px 18px 0 0;
-        }
-        .vignette__restaurant__text {
+            max-width: 400px;
+            height: 200px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding:5px 10px 0 10px;
-            height: 20%;
+            justify-items: center;
+            box-sizing: content-box;
+            flex-direction: column;
+            margin: 2%;
+            padding: 0;
+            @include vignette__border--color($white-background);
+            & img{
+                position: relative;
+                z-index: auto;
+                object-fit: cover;
+                width: 100%;
+                height: 75%;
+                border-radius: 18px 18px 0 0;
+            }
+            .vignette__restaurant__text {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:5px 10px 0 10px;
+                height: 20%;
+            }
         }
     }
 }

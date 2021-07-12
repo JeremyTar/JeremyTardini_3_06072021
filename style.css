@@ -26,8 +26,9 @@ header {
   display: flex;
   width: 100%;
 }
-header a {
+header .Menu__lien {
   margin: auto auto auto 6%;
+  color: black;
 }
 header h1 {
   font-family: "Shrikhand";
@@ -52,8 +53,8 @@ footer ul {
   padding: 0 0 15px 15px;
 }
 footer ul li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 footer ul li i {
   margin: 0 5px 0 0;
@@ -64,6 +65,7 @@ footer ul li i {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -89,6 +91,11 @@ p {
   font-family: "Roboto--Light";
   font-size: 80%;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 /* SECTION */
@@ -117,17 +124,19 @@ p {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 200px;
   width: 100%;
   background-color: #F0F0F0;
   padding: 25px 0 25px 0;
 }
 .section__information h1 {
   display: flex;
+  justify-content: space-around;
   width: 70%;
+  margin: 10px 0 10px 0;
 }
 .section__information h4 {
   width: 70%;
+  margin: 10px 0 10px 0;
 }
 .section__information button {
   width: 200px;
@@ -138,6 +147,7 @@ p {
   border: none;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   font-family: "Roboto--Medium";
+  margin: 10px 0 10px 0;
 }
 
 /* ASIDE */
@@ -147,22 +157,21 @@ aside {
   margin: 20px 0 20px 0;
 }
 aside h1 {
-  width: 100%;
-  padding-left: 15px;
-  margin: 5px;
+  width: 95%;
+  margin: auto;
 }
 aside .fonctionnement {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 5px;
 }
 aside .fonctionnement .fonctionnement__row {
   display: flex;
   align-items: center;
   width: 95%;
+  max-width: 400px;
   height: 50px;
-  margin: 5px;
+  margin: 10px;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: #F0F0F0;
@@ -193,20 +202,21 @@ article {
   background-color: #F0F0F0;
 }
 article h1 {
-  width: 100%;
-  padding-left: 15px;
+  width: 95%;
+  margin: auto;
 }
 article .article__organisation {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 100%;
 }
-article .vignette__restaurant {
+article .article__organisation .vignette__restaurant {
+  z-index: auto;
   min-width: 300px;
+  max-width: 400px;
   height: 200px;
   display: flex;
-  flex-wrap: wrap;
   justify-items: center;
   box-sizing: content-box;
   flex-direction: column;
@@ -217,15 +227,15 @@ article .vignette__restaurant {
   background-color: white;
   border: none;
 }
-article .vignette__restaurant img {
+article .article__organisation .vignette__restaurant img {
+  position: relative;
+  z-index: auto;
   object-fit: cover;
   width: 100%;
-  max-width: 400px;
-  min-width: 300px;
   height: 75%;
   border-radius: 18px 18px 0 0;
 }
-article .vignette__restaurant .vignette__restaurant__text {
+article .article__organisation .vignette__restaurant .vignette__restaurant__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
