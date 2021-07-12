@@ -1,0 +1,83 @@
+
+@import "./base/Font-face.scss";
+@import "./base/Css_global.scss";
+@import "./utils/Variable.scss";
+@import "./utils/mixins.scss";
+@import "./layout/BEM_elements.scss";
+
+
+header h1 {
+    font-size: 2em;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    img
+    {
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+
+    }
+    .menu
+    {
+        display: flex;
+        flex-direction: column;
+        background-color: $light-background;
+        margin-top: -40px;
+        border-radius: 18px 18px 0 0;
+        padding-bottom: 30px;
+        width: 100%;
+        &__titre {
+            width: 85%;
+            height: 50px;
+            margin: 20px auto 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h1 {
+                font-family: 'Shrikhand';
+                font-size: 150%;
+            }
+        }
+        &__block {
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            h2 {
+                font-size: 90%;
+                font-weight: 400;
+                margin: 10px 0 10px 0;
+            }
+            &__vignette {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                max-width: 400px;
+                height: 70px;
+                padding: 10px 15px 10px 15px;
+                margin: 5px 0 5px 0;
+                @include vignette__border--color($white-background);
+                strong {
+                    font-family: 'Roboto--Medium';
+                }
+                &__descriptif {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h4 {
+                        font-size: 80%;
+                    }
+                    p {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+

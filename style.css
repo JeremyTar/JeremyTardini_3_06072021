@@ -18,23 +18,64 @@
   font-family: "Roboto--Light";
   src: url(sass/base/Police/Roboto-Light.ttf);
 }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Roboto--Bold";
+  font-size: 2em;
+}
+
+h2 {
+  font-family: "Roboto--Medium";
+}
+
+h3 {
+  font-family: "Roboto--Medium";
+}
+
+h4 {
+  font-family: "Roboto--Thin";
+}
+
+p {
+  font-family: "Roboto--Light";
+  font-size: 80%;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Variable couleur */
 /* Charte graphique color */
 /* background */
 /* HEADER REUTILISABLE */
 header {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
+  height: 80px;
 }
-header .Menu__lien {
-  margin: auto auto auto 6%;
+header a {
+  position: absolute;
+  left: 20px;
+  width: 15px;
   color: black;
 }
 header h1 {
   font-family: "Shrikhand";
   text-align: center;
-  width: 100%;
-  margin: 10px 0 10px -6%;
+  margin: 10px 0 10px 0;
+  box-sizing: content-box;
+  font-size: 3em;
 }
 
 /* FOOTER REUTILISABLE */
@@ -61,44 +102,11 @@ footer ul li i {
   width: 20px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-h1 {
-  font-family: "Roboto--Bold";
-}
-
-h2 {
-  font-family: "Roboto--Medium";
-  font-size: 95%;
-}
-
-h3 {
-  font-family: "Roboto--Medium";
-  font-size: 95%;
-}
-
-h4 {
-  font-family: "Roboto--Thin";
-  font-size: 95%;
-}
-
-p {
-  font-family: "Roboto--Light";
-  font-size: 80%;
-  font-weight: 400;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
 /* SECTION */
+header .Menu__lien {
+  display: none;
+}
+
 /* Barre localisation */
 .localisation {
   display: flex;
@@ -117,7 +125,7 @@ a {
   size: 50%;
 }
 
-/* INFORMATION */
+/* block informations */
 .section__information {
   display: flex;
   flex-direction: column;
@@ -183,7 +191,7 @@ aside .fonctionnement .fonctionnement__row p {
   display: flex;
   justify-content: space-around;
   padding: 1px;
-  margin-left: -5px;
+  margin-left: -7px;
   border-radius: 15px;
   background-color: #9356DC;
   color: white;
