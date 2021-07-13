@@ -1,0 +1,31 @@
+
+
+
+@keyframes apparition__top {
+    0% {
+        transform: translateY(50px 30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0, 0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes Runing_page {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+
+    }
+
+    100% {
+
+        opacity: 0;
+    }
+
+}

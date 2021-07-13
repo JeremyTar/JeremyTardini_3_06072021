@@ -25,6 +25,11 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 1500px;
+  margin: auto;
+}
+
 h1 {
   font-family: "Roboto--Bold";
   font-size: 2em;
@@ -123,6 +128,24 @@ footer ul li i {
     justify-content: space-around;
   }
 }
+@keyframes apparition__top {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes Runing_page {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* SECTION */
 header .Menu__lien {
   display: none;
@@ -154,19 +177,21 @@ header .Menu__lien {
   text-align: center;
   width: 100%;
   background-color: #F0F0F0;
-  padding: 25px 0 25px 0;
+  padding: 25px 10px 25px 10px;
 }
 .section__information h1 {
   display: flex;
   justify-content: space-around;
-  width: 70%;
   margin: 10px 0 10px 0;
 }
 .section__information h4 {
-  width: 70%;
   margin: 10px 0 10px 0;
 }
-.section__information button {
+.section__information a {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 200px;
   height: 40px;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -175,16 +200,15 @@ header .Menu__lien {
   border: none;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   font-family: "Roboto--Medium";
+  cursor: pointer;
   font-size: 0.8em;
+  transition: all;
   margin: 10px 0 10px 0;
 }
-.section__information button:hover {
+.section__information a:hover {
   opacity: 0.8;
   transition: 0.3s;
-  box-shadow: 5px 5px 17px -4px #050505;
-}
-.section__information button a {
-  color: white;
+  transform: scale(1.15);
 }
 
 /* ASIDE */
@@ -194,7 +218,7 @@ aside {
   margin: 20px 0 20px 0;
 }
 aside h1 {
-  width: 95%;
+  width: 90%;
   margin: auto;
 }
 aside .fonctionnement {
@@ -213,10 +237,11 @@ aside .fonctionnement .fonctionnement__row {
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: #F0F0F0;
   border: none;
+  transition: all;
 }
 aside .fonctionnement .fonctionnement__row:hover {
   background-color: #d7d7d7;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 aside .fonctionnement .fonctionnement__row:hover i {
   color: #9356DC;
@@ -248,7 +273,7 @@ article {
   padding: 20px 0 20px 0;
 }
 article h1 {
-  width: 95%;
+  width: 90%;
   margin: auto;
 }
 article .article__organisation {
@@ -272,6 +297,7 @@ article .article__organisation .vignette__restaurant__card {
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: none;
+  transition: all;
 }
 article .article__organisation .vignette__restaurant__card::before {
   content: "Nouveau";
@@ -319,6 +345,7 @@ article .article__organisation .vignette__restaurant {
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: none;
+  transition: all;
 }
 article .article__organisation .vignette__restaurant img {
   object-fit: cover;

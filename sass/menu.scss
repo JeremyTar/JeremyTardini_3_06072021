@@ -3,6 +3,7 @@
 @import "./base/Css_global.scss";
 @import "./utils/Variable.scss";
 @import "./utils/mixins.scss";
+@import "./utils/keyframes.scss";
 @import "./layout/BEM_elements.scss";
 
 
@@ -25,15 +26,16 @@ article {
         padding-bottom: 30px;
         width: 100%;
         &__titre {
-            width: 85%;
             height: 50px;
             margin: 20px auto 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include apparition__block--top;
+            @include responsiv__menu__title;
             h1 {
                 font-family: 'Shrikhand';
-                font-size: 150%;
+                font-size: 130%;
             }
             i{
                 width: 50px;
@@ -47,7 +49,6 @@ article {
             max-width: 400px;
             margin: auto;
             display: flex;
-            flex-direction: column;
             flex-wrap: wrap;
             h2 {
                 font-size: 90%;
@@ -57,7 +58,7 @@ article {
                 flex-direction: column;
                 &::after {
                     content: "";
-                    width: 40px;
+                    width: 35px;
                     height: 3px;
                     background-color: #99E2D0;
                 }
@@ -65,18 +66,46 @@ article {
             &__vignette {
                 @include vignette__menu;
                 margin: 5px 0 5px 0;
+                display: flex;
+                cursor: pointer;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include apparition__block--top;
+                &:hover {
+                   @include hidden__menu--hover;
+                }
+                .hiden__menu {
+                    @include hidden__menu;
+                }
                 strong {
                     font-family: 'Roboto--Medium';
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
-                &__descriptif {
+                &__text {
+                    width: 100%;
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    h4 {
-                        font-size: 0.8em;
-                    }
-                    p {
-                        font-weight: bold;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: 0 15px 0 15px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &__descriptif {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h4 {
+                            font-size: 1em;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p {
+                            font-weight: bold;
+                            font-size: 1em;
+                            margin: 0 5px 0 5px;
+                        }
                     }
                 }
             }
@@ -85,7 +114,7 @@ article {
             display: flex;
             justify-content: space-around;
             margin: 30px 0 25px 0;
-            button {
+            a {
                 @include gradient-button;
                 &:hover {
                     @include gradient--hover;

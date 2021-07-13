@@ -25,6 +25,11 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 1500px;
+  margin: auto;
+}
+
 h1 {
   font-family: "Roboto--Bold";
   font-size: 2em;
@@ -57,6 +62,25 @@ a {
 /* Variable couleur */
 /* Charte graphique color */
 /* background */
+/* MIXIN RESPONSIV */
+@keyframes apparition__top {
+  0% {
+    transform: translateY(50px 30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes Runing_page {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* HEADER REUTILISABLE */
 header {
   display: flex;
@@ -142,16 +166,32 @@ article .menu {
   width: 100%;
 }
 article .menu__titre {
-  width: 85%;
   height: 50px;
   margin: 20px auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation-name: apparition__top;
+  animation-duration: 1s;
+}
+@media screen and (min-width: 769px) {
+  article .menu__titre {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 500px) {
+  article .menu__titre {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  article .menu__titre {
+    width: 50%;
+  }
 }
 article .menu__titre h1 {
   font-family: "Shrikhand";
-  font-size: 150%;
+  font-size: 130%;
 }
 article .menu__titre i {
   width: 50px;
@@ -164,7 +204,6 @@ article .menu__block {
   max-width: 400px;
   margin: auto;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
 }
 article .menu__block h2 {
@@ -176,43 +215,89 @@ article .menu__block h2 {
 }
 article .menu__block h2::after {
   content: "";
-  width: 40px;
+  width: 35px;
   height: 3px;
   background-color: #99E2D0;
 }
 article .menu__block__vignette {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   max-width: 400px;
   height: 70px;
-  padding: 10px 15px 10px 15px;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: none;
   margin: 5px 0 5px 0;
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  animation-name: apparition__top;
+  animation-duration: 1s;
+}
+article .menu__block__vignette:hover .hiden__menu {
+  transition: 0.4s;
+  width: 100px;
+  opacity: 1;
+}
+article .menu__block__vignette:hover .hiden__menu i {
+  transform: rotate(360deg);
+  transition: 0.5s;
+}
+article .menu__block__vignette .hiden__menu {
+  display: flex;
+  border-radius: 0 15px 15px 0;
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.5em;
+  background: #99E2D0;
+  width: 0;
+  opacity: 0;
+  color: white;
 }
 article .menu__block__vignette strong {
   font-family: "Roboto--Medium";
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-article .menu__block__vignette__descriptif {
+article .menu__block__vignette__text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 15px 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+article .menu__block__vignette__text__descriptif {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-article .menu__block__vignette__descriptif h4 {
-  font-size: 0.8em;
+article .menu__block__vignette__text__descriptif h4 {
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-article .menu__block__vignette__descriptif p {
+article .menu__block__vignette__text__descriptif p {
   font-weight: bold;
+  font-size: 1em;
+  margin: 0 5px 0 5px;
 }
 article .menu__boutton {
   display: flex;
   justify-content: space-around;
   margin: 30px 0 25px 0;
 }
-article .menu__boutton button {
+article .menu__boutton a {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 200px;
   height: 40px;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -221,12 +306,14 @@ article .menu__boutton button {
   border: none;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   font-family: "Roboto--Medium";
+  cursor: pointer;
   font-size: 0.8em;
+  transition: all;
 }
-article .menu__boutton button:hover {
+article .menu__boutton a:hover {
   opacity: 0.8;
   transition: 0.3s;
-  box-shadow: 5px 5px 17px -4px #050505;
+  transform: scale(1.15);
 }
 
 /*# sourceMappingURL=menu.css.map */

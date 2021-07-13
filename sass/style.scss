@@ -4,7 +4,7 @@
 @import "./utils/Variable.scss";
 @import "./utils/mixins.scss";
 @import "./layout/BEM_elements.scss";
-
+@import "./utils/keyframes.scss";
 
 /* SECTION */
 
@@ -44,26 +44,21 @@ header {
     text-align: center;
     width: 100%;
     background-color: $light-background;
-    padding: 25px 0 25px 0;
+    padding: 25px 10px 25px 10px;
     h1{
         display: flex;
         justify-content: space-around ;
-        width: 70%;
         margin: 10px 0 10px 0;
     }
     h4{
-        width: 70%;
         margin: 10px 0 10px 0;
     }
-    button
+    a
     {
         @include gradient-button;
         margin: 10px 0 10px 0;
         &:hover {
             @include gradient--hover;
-        }
-        a {
-            color: white;
         }
     }
 }
@@ -78,7 +73,7 @@ aside
     flex-direction: column;
     margin: 20px 0 20px 0;
     h1 {
-        width: 95%;
+        width: 90%;
         margin: auto;
     }
     .fonctionnement {
@@ -129,7 +124,7 @@ article{
     background-color: $light-background;
     padding: 20px 0 20px 0;
     & h1 {
-        width: 95%;
+        width: 90%;
         margin: auto;
     }
     .article__organisation {
