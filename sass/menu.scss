@@ -37,11 +37,9 @@ article {
                 font-family: 'Shrikhand';
                 font-size: 130%;
             }
-            i{
-                width: 50px;
-                display: flex;
-                justify-content: flex-start;
-                font-size: 2em;
+            .variation__vignette 
+            {
+                box-sizing: content-box;
             }
         }
         &__block {

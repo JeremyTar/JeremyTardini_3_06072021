@@ -91,9 +91,20 @@
 
 @mixin apparition__block--top {
     animation-name: apparition__top;
-    animation-duration: 1s;
+    animation-duration: 1.5s;    
 }
 
+@mixin heart--full--active{
+    animation-name: animation__active__full;
+    color:linear-gradient(to bottom right, $secondaire-color, $primaire-color);
+    animation-duration: 100ms;
+
+}
+
+@mixin heart--light {
+    animation-name: animation__hover__light;
+    animation-duration: 1s;
+}
 
 /* MIXIN RESPONSIV */
 

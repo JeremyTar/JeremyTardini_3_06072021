@@ -65,20 +65,48 @@ a {
 /* MIXIN RESPONSIV */
 @keyframes apparition__top {
   0% {
-    transform: translateY(50px 30%);
+    transform: translateY(30px);
     opacity: 0;
   }
   100% {
-    transform: translateY(0, 0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes Runing_page {
+@keyframes runing_page {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+@keyframes animation__active__full {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes animation__hover__light {
+  0% {
+    transform: scale(100%);
+  }
+  49% {
+    transform: scale(0);
+  }
+  50% {
+    display: none;
+  }
+  100% {
+    display: none;
   }
 }
 /* HEADER REUTILISABLE */
@@ -172,7 +200,7 @@ article .menu__titre {
   align-items: center;
   justify-content: space-between;
   animation-name: apparition__top;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
 }
 @media screen and (min-width: 769px) {
   article .menu__titre {
@@ -193,11 +221,8 @@ article .menu__titre h1 {
   font-family: "Shrikhand";
   font-size: 130%;
 }
-article .menu__titre i {
-  width: 50px;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 2em;
+article .menu__titre .variation__vignette {
+  box-sizing: content-box;
 }
 article .menu__block {
   width: 90%;
@@ -235,7 +260,7 @@ article .menu__block__vignette {
   white-space: nowrap;
   text-overflow: ellipsis;
   animation-name: apparition__top;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
 }
 article .menu__block__vignette:hover .hiden__menu {
   transition: 0.4s;

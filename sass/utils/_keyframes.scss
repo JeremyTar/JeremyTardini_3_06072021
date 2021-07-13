@@ -3,18 +3,17 @@
 
 @keyframes apparition__top {
     0% {
-        transform: translateY(50px 30%);
+        transform: translateY(30px);
         opacity: 0;
     }
-
     100% {
-        transform: translateY(0, 0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
 
-@keyframes Runing_page {
+@keyframes runing_page {
     0% {
         opacity: 1;
     }
@@ -28,4 +27,35 @@
         opacity: 0;
     }
 
+}
+
+@keyframes animation__active__full {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    90% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animation__hover__light {
+
+    0% {
+        transform: scale(100%);
+    }
+    49% {
+        transform: scale(0);
+    }
+    50% { 
+        display: none;
+    }
+    100% {
+        display: none;
+    }
 }
