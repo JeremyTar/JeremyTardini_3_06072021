@@ -1,5 +1,4 @@
-
-
+/* KEYFRAMES APPARITION */
 
 @keyframes apparition__top {
     0% {
@@ -12,38 +11,29 @@
     }
 }
 
-
-@keyframes runing_page {
+@keyframes apparition__restaurant__left {
     0% {
-        opacity: 1;
-    }
-
-    50% {
-
-    }
-
-    100% {
-
+        transform: translateX(-30px);
         opacity: 0;
     }
-
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-@keyframes animation__active__full {
+@keyframes apparition__restaurant__right {
     0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    90% {
-        transform: scale(95%);
+        transform: translateX(30px);
+        opacity: 0;
     }
     100% {
-        transform: scale(1);
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
+/* KEYFRAMES HEART ANIMATION */ 
 
 @keyframes heart-fading--full {
     from {
@@ -58,11 +48,24 @@
 
   @keyframes heart-fading--light {
       from {
-        transform: scale(1);
         opacity: 1;
       }
       to {
-        transform: scale(0);
         opacity: 0;
       }
   }
+
+  @keyframes animation__active--full {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    90% {
+        transform: scale(95%);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

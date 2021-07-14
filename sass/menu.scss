@@ -25,20 +25,20 @@ article {
         border-radius: 18px 18px 0 0;
         padding-bottom: 30px;
         width: 100%;
+        @include apparition__block--top;
         &__titre {
             height: 50px;
             margin: 20px auto 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            @include apparition__block--top;
             @include responsiv__menu__title;
             h1 {
                 font-family: 'Shrikhand';
                 font-size: 130%;
+                font-weight: 500;
             }
             .variation__vignette {
-
                 #heart--light {
                     font-size: 2em;
                     position: relative;
@@ -70,7 +70,7 @@ article {
             flex-wrap: wrap;
             h2 {
                 font-size: 90%;
-                font-weight: 400;
+                font-weight: 500;
                 margin: 10px 0 10px 0;
                 display: flex;
                 flex-direction: column;
@@ -90,7 +90,7 @@ article {
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                @include apparition__block--top;
+                opacity: 0;
                 &:hover {
                    @include hidden__menu--hover;
                 }
