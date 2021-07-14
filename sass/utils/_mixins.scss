@@ -15,8 +15,8 @@
     cursor: pointer;
     font-size: 0.8em;
     transition: all;
-    ;
 }
+
 @mixin gradient--hover {
     opacity: 0.8;
     transition: 0.3s;
@@ -94,17 +94,27 @@
     animation-duration: 1.5s;    
 }
 
+
+@mixin animation--heart {
+    #heart--full {
+        animation-name: heart-fading--full;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+    #heart--light {
+        animation-name: heart-fading--light;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+}
+
 @mixin heart--full--active{
     animation-name: animation__active__full;
-    color:linear-gradient(to bottom right, $secondaire-color, $primaire-color);
     animation-duration: 100ms;
-
+    animation-fill-mode: forwards;
 }
 
-@mixin heart--light {
-    animation-name: animation__hover__light;
-    animation-duration: 1s;
-}
+
 
 /* MIXIN RESPONSIV */
 
