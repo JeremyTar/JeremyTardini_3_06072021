@@ -26,7 +26,7 @@
 }
 
 body {
-  max-width: 1500px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -62,6 +62,7 @@ a {
 /* Variable couleur */
 /* Charte graphique color */
 /* background */
+/* LOEADER MENU */
 /* Gradient button */
 /* Mixin pour creation de vignette */
 /* MIXIN Carte "Nouveau" */
@@ -71,6 +72,7 @@ a {
 /* MIXIN DELAY VIGNETTE */
 /* Menu */
 /* Restaurant */
+/* a taf */
 /* KEYFRAMES APPARITION */
 @keyframes apparition__top {
   0% {
@@ -82,7 +84,7 @@ a {
     opacity: 1;
   }
 }
-@keyframes apparition__restaurant--left {
+@keyframes apparition__restaurant__left {
   0% {
     transform: translateX(-30px);
     opacity: 0;
@@ -92,7 +94,7 @@ a {
     opacity: 1;
   }
 }
-@keyframes apparition__restaurant--right {
+@keyframes apparition__restaurant__right {
   0% {
     transform: translateX(30px);
     opacity: 0;
@@ -135,7 +137,54 @@ a {
     transform: scale(1);
   }
 }
-@keyframes animation--delay {}
+@keyframes animation__lettre__1 {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.8);
+  }
+  90% {
+    transform: scaleY(1.15);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes jump__shadow {
+  33% {
+    text-shadow: 0 30px #FF79DA, 0 80px #99E2D0;
+  }
+  50% {
+    transform: translate(0, 0) rotate(-4deg);
+    text-shadow: 0 0px #99E2D0, 0 0px #9356DC;
+  }
+  67% {
+    text-shadow: 0 -30px #9356DC, 0 -80px #FF79DA;
+  }
+}
+@keyframes lettre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation__gradient__color {
+  0% {
+    color: #9356DC;
+  }
+  33% {
+    color: #FF79DA;
+  }
+  66% {
+    color: #99E2D0;
+  }
+  100% {
+    color: #9356DC;
+  }
+}
 /* HEADER REUTILISABLE */
 header {
   display: flex;
@@ -152,11 +201,11 @@ header a {
 }
 header h1 {
   font-family: "Shrikhand";
+  font-size: 2.5em;
+  font-weight: 500;
   text-align: center;
   margin: 10px 0 10px 0;
   box-sizing: content-box;
-  font-size: 2.5em;
-  font-weight: 500;
 }
 
 /* FOOTER REUTILISABLE */
@@ -167,9 +216,10 @@ footer {
 }
 footer h1 {
   font-family: "Shrikhand";
+  font-size: 2.5em;
+  font-weight: 500;
   font-size: 1.5em;
   padding: 15px 0 10px 15px;
-  font-weight: 500;
 }
 footer ul {
   font-family: "Roboto--Light";
@@ -283,8 +333,9 @@ article .menu__titre {
 }
 article .menu__titre h1 {
   font-family: "Shrikhand";
-  font-size: 130%;
+  font-size: 2.5em;
   font-weight: 500;
+  font-size: 150%;
 }
 article .menu__titre .variation__vignette #heart--light {
   font-size: 2em;
@@ -429,6 +480,7 @@ article .menu__boutton a:hover {
   opacity: 0.8;
   transition: 0.3s;
   transform: scale(1.15);
+  box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.7);
 }
 
 /*# sourceMappingURL=menu.css.map */

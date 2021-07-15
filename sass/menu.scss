@@ -34,9 +34,8 @@ article {
             justify-content: space-between;
             @include responsiv__menu__title;
             h1 {
-                font-family: 'Shrikhand';
+                @include titre__logo;
                 font-size: 130%;
-                font-weight: 500;
             }
             .variation__vignette {
                 #heart--light {

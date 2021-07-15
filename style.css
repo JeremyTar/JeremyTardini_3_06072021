@@ -26,7 +26,7 @@
 }
 
 body {
-  max-width: 1500px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -62,6 +62,7 @@ a {
 /* Variable couleur */
 /* Charte graphique color */
 /* background */
+/* LOADER MENU */
 /* Gradient button */
 /* Mixin pour creation de vignette */
 /* MIXIN Carte "Nouveau" */
@@ -88,11 +89,11 @@ header a {
 }
 header h1 {
   font-family: "Shrikhand";
+  font-size: 2.5em;
+  font-weight: 500;
   text-align: center;
   margin: 10px 0 10px 0;
   box-sizing: content-box;
-  font-size: 2.5em;
-  font-weight: 500;
 }
 
 /* FOOTER REUTILISABLE */
@@ -103,9 +104,10 @@ footer {
 }
 footer h1 {
   font-family: "Shrikhand";
+  font-size: 2.5em;
+  font-weight: 500;
   font-size: 1.5em;
   padding: 15px 0 10px 15px;
-  font-weight: 500;
 }
 footer ul {
   font-family: "Roboto--Light";
@@ -202,7 +204,135 @@ footer ul li i {
     transform: scale(1);
   }
 }
-/* SECTION */
+@keyframes animation__lettre__1 {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.8);
+  }
+  90% {
+    transform: scaleY(1.15);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes jump__shadow {
+  33% {
+    text-shadow: 0 30px #FF79DA, 0 60px #99E2D0;
+  }
+  50% {
+    transform: translate(0, 0) rotate(-4deg);
+    text-shadow: 0 0px #99E2D0, 0 0px #9356DC;
+  }
+  67% {
+    text-shadow: 0 -30px #9356DC, 0 -60px #FF79DA;
+  }
+}
+@keyframes lettre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation__gradient__color {
+  0% {
+    background-color: #9356DC;
+  }
+  33% {
+    background-color: #FF79DA;
+  }
+  66% {
+    background-color: #99E2D0;
+  }
+  100% {
+    background-color: #9356DC;
+  }
+}
+@keyframes loader__sortie {
+  0% {
+    z-index: 10;
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    height: 0%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+/* LOADER */
+.loader__background {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  background-color: #3E3E3E;
+  z-index: 10;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  animation: loader__sortie 1s ease forwards 4.5s;
+}
+.loader__background #loader__animation h1 {
+  font-size: 1em;
+  color: white;
+}
+.loader__background #loader__animation h1::before {
+  content: "";
+  display: block;
+  height: 10px;
+  margin-bottom: 55px;
+  border-radius: 15px;
+  animation: animation__gradient__color 3s ease infinite;
+}
+.loader__background #loader__animation h1::after {
+  content: "";
+  display: block;
+  height: 10px;
+  margin-top: 70px;
+  border-radius: 15px;
+  animation: animation__gradient__color 3s ease infinite;
+}
+.loader__background #loader__animation h1 span {
+  margin: 2px;
+  transform: scale(1);
+  font-family: "Shrikhand";
+  font-size: 2.5em;
+  font-weight: 500;
+  text-shadow: 0 0px #9356DC, 0 0px #FF79DA;
+  transform: translate(0, 50%) rotate(4deg);
+  animation: jump__shadow 5s ease-in-out infinite;
+  display: inline-block;
+}
+.loader__background #loader__animation h1 span:nth-child(1) {
+  animation-delay: 220ms;
+}
+.loader__background #loader__animation h1 span:nth-child(2) {
+  animation-delay: 440ms;
+}
+.loader__background #loader__animation h1 span:nth-child(3) {
+  animation-delay: 660ms;
+}
+.loader__background #loader__animation h1 span:nth-child(4) {
+  animation-delay: 880ms;
+}
+.loader__background #loader__animation h1 span:nth-child(5) {
+  animation-delay: 1100ms;
+}
+.loader__background #loader__animation h1 span:nth-child(6) {
+  animation-delay: 1320ms;
+}
+.loader__background #loader__animation h1 span:nth-child(7) {
+  animation-delay: 1540ms;
+}
+.loader__background #loader__animation h1 span:nth-child(8) {
+  animation-delay: 1760ms;
+}
+
 header .Menu__lien {
   display: none;
 }
@@ -265,6 +395,7 @@ header .Menu__lien {
   opacity: 0.8;
   transition: 0.3s;
   transform: scale(1.15);
+  box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.7);
 }
 
 /* ASIDE */
@@ -346,7 +477,7 @@ article .article__organisation .vignette__restaurant__card {
   justify-items: center;
   box-sizing: content-box;
   flex-direction: column;
-  margin: 2%;
+  margin: 15px;
   padding: 0;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
@@ -412,7 +543,6 @@ article .article__organisation .vignette__restaurant__card .vignette__restaurant
   animation-fill-mode: both;
 }
 article .article__organisation .vignette__restaurant {
-  z-index: auto;
   min-width: 300px;
   max-width: 400px;
   height: 200px;
@@ -420,7 +550,7 @@ article .article__organisation .vignette__restaurant {
   justify-items: center;
   box-sizing: content-box;
   flex-direction: column;
-  margin: 2%;
+  margin: 15px;
   padding: 0;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);

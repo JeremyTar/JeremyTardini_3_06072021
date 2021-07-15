@@ -17,12 +17,10 @@ header
         color: black;
     }
     h1 {
-        font-family: "Shrikhand";
+        @include titre__logo;
         text-align: center;
         margin: 10px 0 10px 0;
         box-sizing: content-box;
-        font-size: 2.5em;
-        font-weight: 500;
     }
 }
 
@@ -36,10 +34,9 @@ footer
     background-color: $black-background;
     color: white;
     h1 {
-    font-family: 'Shrikhand';
+    @include titre__logo;
     font-size: 1.5em;
     padding: 15px 0 10px 15px;
-    font-weight: 500;
     }
     ul {
         font-family: 'Roboto--Light';
