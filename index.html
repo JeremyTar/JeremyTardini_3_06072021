@@ -8,6 +8,7 @@
         <title>Oh My Food</title>
     </head>
 
+    <!-- LOADER  -->
 
     <div class=loader__background>
         <div id="loader__animation">
@@ -26,7 +27,6 @@
     </div>
 
 
-
 <!-- HEADER REUTILISABLE -->
 
     <header>
@@ -34,11 +34,12 @@
         <h1>ohmyfood</h1>
     </header>
 
-<!-- SECTION LOCALISATION -->
+<!-- SECTION LOCALISATION/LOCALISATION -->
 
     <section>
         <div class="localisation">
-            <h3><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h3>
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" class="search" name="recherche" placeholder="Paris, Belleville"/>
         </div>
         <div class="section__information">
             <h1>Réservez le menu qui vous convient</h1>
@@ -75,14 +76,16 @@
     <article>
         <h1>Restaurants</h1>
         <div class="article__organisation">
-            <a href="page_html/La_palette_du_goût.html" class="vignette__restaurant__card">
-                <img src="Maquette/Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                <div class="vignette__restaurant__text">
+            <div class="restaurant__vignette__card">
+                <a href="page_html/La_palette_du_goût.html">
+                    <img src="Maquette/Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                </a>
+                <div class="restaurant__vignette__text">
                     <div>
                         <h3>La pallette du goût</h3>
                         <h4>Ménilmontant</h4>
                     </div>
-                    <div class="vignette__restaurant__icone">
+                    <div class="restaurant__vignette__icone">
                         <i id="heart--light" class="far fa-heart"></i>
                         <svg id="heart--full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" role="svg" viewBox="0 0 512 512">
                             <linearGradient id="gradient">
@@ -93,15 +96,17 @@
                         </svg>
                     </div>
                 </div>
-            </a>
-            <a href="page_html/La_note_enchantée.html" class="vignette__restaurant__card">
-                <img src="Maquette/Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                <div class="vignette__restaurant__text">
+            </div>
+            <div class="restaurant__vignette__card">
+                <a href="page_html/La_note_enchantée.html">
+                    <img src="Maquette/Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                </a>
+                <div class="restaurant__vignette__text">
                     <div>
                         <h3>La note enchantée</h3>
                         <h4>Charonne</h4>
                     </div>
-                    <div class="vignette__restaurant__icone">
+                    <div class="restaurant__vignette__icone">
                         <i id="heart--light" class="far fa-heart"></i>
                         <svg id="heart--full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" role="svg" viewBox="0 0 512 512">
                             <linearGradient id="gradient">
@@ -112,15 +117,17 @@
                         </svg>
                     </div>
                 </div>
-            </a>
-            <a href="page_html/A_la_francaise.html" class="vignette__restaurant">
-                <img src="Maquette/Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la Francaise">
-                <div class="vignette__restaurant__text">
+            </div>
+            <div class="restaurant__vignette__withoutcard">
+                <a href="page_html/A_la_francaise.html">
+                    <img src="Maquette/Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la Francaise">
+                </a>
+                <div class="restaurant__vignette__text">
                     <div>
                         <h3>À la francaise</h3>
                         <h4>Cité Rouge</h4>
                     </div>
-                    <div class="vignette__restaurant__icone">
+                    <div class="restaurant__vignette__icone">
                         <i id="heart--light" class="far fa-heart"></i>
                         <svg id="heart--full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" role="svg" viewBox="0 0 512 512">
                             <linearGradient id="gradient">
@@ -131,15 +138,17 @@
                         </svg>
                     </div>
                 </div>
-            </a>
-            <a href="page_html/Le_delice_des_sens.html" class="vignette__restaurant">
-                <img src="Maquette/Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="A la Francaise">
-                <div class="vignette__restaurant__text">
+            </div>
+            <div class="restaurant__vignette__withoutcard">
+                <a href="page_html/Le_delice_des_sens.html">
+                    <img src="Maquette/Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="A la Francaise">
+                </a>
+                <div class="restaurant__vignette__text">
                     <div>
                         <h3>Le delice des sens</h3>
                         <h4>Folie-Méricourt</h4>
                     </div>
-                    <div class="vignette__restaurant__icone">
+                    <div class="restaurant__vignette__icone">
                         <i id="heart--light" class="far fa-heart"></i>
                         <svg id="heart--full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" role="svg" viewBox="0 0 512 512">
                             <linearGradient id="gradient">
@@ -150,7 +159,7 @@
                         </svg>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </article>
 

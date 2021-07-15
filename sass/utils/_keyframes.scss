@@ -70,22 +70,7 @@
     }
 }
 
-@keyframes animation__lettre__1 {
-    0% {
-        transform: scaleY(1);
-    }
-    50% {
-        transform: scaleY(0.8);
-    }
-    90% {
-        transform:scaleY(1.15)
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
-
-
+/* ANIMATION LOADER */
 
 @keyframes jump__shadow {
     33% {
@@ -99,30 +84,6 @@
       text-shadow: 0 -30px $primaire-color, 0 -60px $secondaire-color;
     }
   }
-
-@keyframes lettre {
-    0% {
-        opacity: 0;
-    }
-	100% {
-        opacity: 1;
-    }
-}
-
- @keyframes animation__gradient__color {
-     0% {
-         background-color: $primaire-color;
-     }
-     33% {
-        background-color: $secondaire-color;
-     }
-     66% {
-        background-color: $tertaire-color;
-     }
-     100% {
-        background-color: $primaire-color;
-     }
- }
 
  @keyframes loader__sortie {
      0% {

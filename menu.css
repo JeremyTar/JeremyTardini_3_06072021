@@ -59,20 +59,24 @@ a {
   color: black;
 }
 
+input {
+  font-family: "Roboto--Medium";
+}
+
 /* Variable couleur */
 /* Charte graphique color */
 /* background */
-/* LOEADER MENU */
+/* LOADER MENU */
+/* MIXINS OUTILS */
 /* Gradient button */
-/* Mixin pour creation de vignette */
-/* MIXIN Carte "Nouveau" */
+/* Mixins outils pour creation de vignette */
+/* Mixin vignette pour nouveau restaurant */
 /* MIXIN ANIMATION MENU */
 /* MIXIN ANNIMATION HEART */
 /* MIXIN RESPONSIV */
+/* responsiv title - icone menu */
 /* MIXIN DELAY VIGNETTE */
 /* Menu */
-/* Restaurant */
-/* a taf */
 /* KEYFRAMES APPARITION */
 @keyframes apparition__top {
   0% {
@@ -137,52 +141,29 @@ a {
     transform: scale(1);
   }
 }
-@keyframes animation__lettre__1 {
-  0% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scaleY(0.8);
-  }
-  90% {
-    transform: scaleY(1.15);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
+/* ANIMATION LOADER */
 @keyframes jump__shadow {
   33% {
-    text-shadow: 0 30px #FF79DA, 0 80px #99E2D0;
+    text-shadow: 0 30px #FF79DA, 0 60px #99E2D0;
   }
   50% {
     transform: translate(0, 0) rotate(-4deg);
     text-shadow: 0 0px #99E2D0, 0 0px #9356DC;
   }
   67% {
-    text-shadow: 0 -30px #9356DC, 0 -80px #FF79DA;
+    text-shadow: 0 -30px #9356DC, 0 -60px #FF79DA;
   }
 }
-@keyframes lettre {
+@keyframes loader__sortie {
   0% {
-    opacity: 0;
-  }
-  100% {
+    z-index: 10;
+    height: 100%;
     opacity: 1;
   }
-}
-@keyframes animation__gradient__color {
-  0% {
-    color: #9356DC;
-  }
-  33% {
-    color: #FF79DA;
-  }
-  66% {
-    color: #99E2D0;
-  }
   100% {
-    color: #9356DC;
+    height: 0%;
+    opacity: 0;
+    z-index: -1;
   }
 }
 /* HEADER REUTILISABLE */
@@ -214,6 +195,21 @@ footer {
   background-color: #3E3E3E;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  footer h1 {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer ul li {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 footer h1 {
   font-family: "Shrikhand";
   font-size: 2.5em;
@@ -241,17 +237,6 @@ footer ul li i {
   width: 20px;
 }
 
-@media screen and (min-width: 500px) {
-  footer footer h1 {
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-  }
-  footer footer ul {
-    display: flex;
-    justify-content: space-around;
-  }
-}
 article {
   display: flex;
   flex-direction: column;
@@ -270,43 +255,43 @@ article .menu {
   padding-bottom: 30px;
   width: 100%;
 }
-article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(1) {
+article .menu .menu__block:nth-child(1) .menu__block__vignette:nth-child(1) {
   animation: apparition__top 0.5s ease-out forwards 0.5s;
 }
-article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(2) {
+article .menu .menu__block:nth-child(1) .menu__block__vignette:nth-child(2) {
   animation: apparition__top 0.5s ease-out forwards 0.7s;
 }
-article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(3) {
+article .menu .menu__block:nth-child(1) .menu__block__vignette:nth-child(3) {
   animation: apparition__top 0.5s ease-out forwards 0.9s;
 }
-article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(4) {
+article .menu .menu__block:nth-child(1) .menu__block__vignette:nth-child(4) {
   animation: apparition__top 0.5s ease-out forwards 1.1s;
 }
-article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(5) {
+article .menu .menu__block:nth-child(1) .menu__block__vignette:nth-child(5) {
   animation: apparition__top 0.5s ease-out forwards 1.2s;
 }
-article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(1) {
+article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(1) {
   animation: apparition__top 0.5s ease-out forwards 1.3s;
 }
-article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(2) {
+article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(2) {
   animation: apparition__top 0.5s ease-out forwards 1.5s;
 }
-article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(3) {
+article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(3) {
   animation: apparition__top 0.5s ease-out forwards 1.7s;
 }
-article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(4) {
+article .menu .menu__block:nth-child(2) .menu__block__vignette:nth-child(4) {
   animation: apparition__top 0.5s ease-out forwards 1.9s;
 }
-article .menu .menu__block:nth-child(4) .menu__block__vignette:nth-child(1) {
+article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(1) {
   animation: apparition__top 0.5s ease-out forwards 2.1s;
 }
-article .menu .menu__block:nth-child(4) .menu__block__vignette:nth-child(2) {
+article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(2) {
   animation: apparition__top 0.5s ease-out forwards 2.3s;
 }
-article .menu .menu__block:nth-child(4) .menu__block__vignette:nth-child(3) {
+article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(3) {
   animation: apparition__top 0.5s ease-out forwards 2.5s;
 }
-article .menu .menu__block:nth-child(4) .menu__block__vignette:nth-child(4) {
+article .menu .menu__block:nth-child(3) .menu__block__vignette:nth-child(4) {
   animation: apparition__top 0.5s ease-out forwards 2.7s;
 }
 article .menu__titre {
@@ -335,7 +320,7 @@ article .menu__titre h1 {
   font-family: "Shrikhand";
   font-size: 2.5em;
   font-weight: 500;
-  font-size: 150%;
+  font-size: 130%;
 }
 article .menu__titre .variation__vignette #heart--light {
   font-size: 2em;
@@ -366,27 +351,27 @@ article .menu__titre .variation__vignette:active {
   animation-duration: 100ms;
   animation-fill-mode: both;
 }
-article .menu__block {
+article .menu .menu__organisation .menu__block {
   width: 90%;
   max-width: 400px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
-article .menu__block h2 {
+article .menu .menu__organisation .menu__block h2 {
   font-size: 90%;
   font-weight: 500;
   margin: 10px 0 10px 0;
   display: flex;
   flex-direction: column;
 }
-article .menu__block h2::after {
+article .menu .menu__organisation .menu__block h2::after {
   content: "";
   width: 35px;
   height: 3px;
   background-color: #99E2D0;
 }
-article .menu__block__vignette {
+article .menu .menu__organisation .menu__block__vignette {
   display: flex;
   max-width: 400px;
   height: 70px;
@@ -403,16 +388,16 @@ article .menu__block__vignette {
   text-overflow: ellipsis;
   opacity: 0;
 }
-article .menu__block__vignette:hover .hiden__menu {
+article .menu .menu__organisation .menu__block__vignette:hover .hiden__menu {
   transition: 0.4s;
   width: 100px;
   opacity: 1;
 }
-article .menu__block__vignette:hover .hiden__menu i {
+article .menu .menu__organisation .menu__block__vignette:hover .hiden__menu i {
   transform: rotate(360deg);
   transition: 0.5s;
 }
-article .menu__block__vignette .hiden__menu {
+article .menu .menu__organisation .menu__block__vignette .hiden__menu {
   display: flex;
   border-radius: 0 15px 15px 0;
   text-align: center;
@@ -425,12 +410,12 @@ article .menu__block__vignette .hiden__menu {
   opacity: 0;
   color: white;
 }
-article .menu__block__vignette strong {
+article .menu .menu__organisation .menu__block__vignette strong {
   font-family: "Roboto--Medium";
   overflow: hidden;
   text-overflow: ellipsis;
 }
-article .menu__block__vignette__text {
+article .menu .menu__organisation .menu__block__vignette__text {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -439,17 +424,17 @@ article .menu__block__vignette__text {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-article .menu__block__vignette__text__descriptif {
+article .menu .menu__organisation .menu__block__vignette__text__descriptif {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-article .menu__block__vignette__text__descriptif h4 {
+article .menu .menu__organisation .menu__block__vignette__text__descriptif h4 {
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-article .menu__block__vignette__text__descriptif p {
+article .menu .menu__organisation .menu__block__vignette__text__descriptif p {
   font-weight: bold;
   font-size: 1em;
   margin: 0 5px 0 5px;

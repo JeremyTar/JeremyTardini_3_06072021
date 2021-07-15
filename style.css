@@ -59,20 +59,25 @@ a {
   color: black;
 }
 
+input {
+  font-family: "Roboto--Medium";
+}
+
 /* Variable couleur */
 /* Charte graphique color */
 /* background */
 /* LOADER MENU */
+/* MIXINS OUTILS */
 /* Gradient button */
-/* Mixin pour creation de vignette */
-/* MIXIN Carte "Nouveau" */
+/* Mixins outils pour creation de vignette */
+/* Mixin vignette pour nouveau restaurant */
 /* MIXIN ANIMATION MENU */
 /* MIXIN ANNIMATION HEART */
 /* MIXIN RESPONSIV */
+/* responsiv title - icone menu */
 /* MIXIN DELAY VIGNETTE */
 /* Menu */
-/* Restaurant */
-/* a taf */
+/* MIXIN EUUH... FLEME ? */
 /* HEADER REUTILISABLE */
 header {
   display: flex;
@@ -102,6 +107,21 @@ footer {
   background-color: #3E3E3E;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  footer h1 {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer ul li {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 footer h1 {
   font-family: "Shrikhand";
   font-size: 2.5em;
@@ -129,17 +149,6 @@ footer ul li i {
   width: 20px;
 }
 
-@media screen and (min-width: 500px) {
-  footer footer h1 {
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-  }
-  footer footer ul {
-    display: flex;
-    justify-content: space-around;
-  }
-}
 /* KEYFRAMES APPARITION */
 @keyframes apparition__top {
   0% {
@@ -204,20 +213,7 @@ footer ul li i {
     transform: scale(1);
   }
 }
-@keyframes animation__lettre__1 {
-  0% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scaleY(0.8);
-  }
-  90% {
-    transform: scaleY(1.15);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
+/* ANIMATION LOADER */
 @keyframes jump__shadow {
   33% {
     text-shadow: 0 30px #FF79DA, 0 60px #99E2D0;
@@ -228,28 +224,6 @@ footer ul li i {
   }
   67% {
     text-shadow: 0 -30px #9356DC, 0 -60px #FF79DA;
-  }
-}
-@keyframes lettre {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes animation__gradient__color {
-  0% {
-    background-color: #9356DC;
-  }
-  33% {
-    background-color: #FF79DA;
-  }
-  66% {
-    background-color: #99E2D0;
-  }
-  100% {
-    background-color: #9356DC;
   }
 }
 @keyframes loader__sortie {
@@ -275,27 +249,11 @@ footer ul li i {
   display: flex;
   place-items: center;
   justify-content: center;
-  animation: loader__sortie 1s ease forwards 4.5s;
+  animation: loader__sortie 1s ease forwards 5s;
 }
 .loader__background #loader__animation h1 {
   font-size: 1em;
   color: white;
-}
-.loader__background #loader__animation h1::before {
-  content: "";
-  display: block;
-  height: 10px;
-  margin-bottom: 55px;
-  border-radius: 15px;
-  animation: animation__gradient__color 3s ease infinite;
-}
-.loader__background #loader__animation h1::after {
-  content: "";
-  display: block;
-  height: 10px;
-  margin-top: 70px;
-  border-radius: 15px;
-  animation: animation__gradient__color 3s ease infinite;
 }
 .loader__background #loader__animation h1 span {
   margin: 2px;
@@ -341,17 +299,23 @@ header .Menu__lien {
 .localisation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 50px;
   width: 100%;
   background-color: #E5E5E5;
   box-shadow: inset 0px 5px 6px -5px black;
 }
-.localisation h3 {
-  font-size: 90%;
+.localisation i {
+  padding: 2px;
 }
-.localisation h3 i {
-  padding: 0 10px 0 0;
+.localisation input {
+  box-sizing: content-box;
+  font-weight: 500;
+  font-size: 1em;
+  background: #E5E5E5;
+  text-align: center;
+  margin-left: 2px;
+  outline-style: none;
 }
 
 /* block informations */
@@ -418,13 +382,12 @@ aside .fonctionnement .fonctionnement__row {
   align-items: center;
   width: 95%;
   max-width: 400px;
-  height: 50px;
+  height: 60px;
   margin: 10px;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: #F0F0F0;
   border: none;
-  transition: all;
 }
 aside .fonctionnement .fonctionnement__row:hover {
   background-color: #d7d7d7;
@@ -465,27 +428,26 @@ article h1 {
 }
 article .article__organisation {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
 }
-article .article__organisation .vignette__restaurant__card {
+article .article__organisation .restaurant__vignette__card {
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: none;
+  width: 100%;
   min-width: 300px;
   max-width: 400px;
   height: 200px;
   display: flex;
   justify-items: center;
-  box-sizing: content-box;
   flex-direction: column;
-  margin: 15px;
   padding: 0;
-  border-radius: 15px;
-  box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
-  background-color: white;
-  border: none;
-  transition: all;
+  margin: 15px;
 }
-article .article__organisation .vignette__restaurant__card::before {
+article .article__organisation .restaurant__vignette__card::before {
   content: "Nouveau";
   position: relative;
   top: 7.5%;
@@ -498,105 +460,113 @@ article .article__organisation .vignette__restaurant__card::before {
   padding-top: 5px;
   text-align: center;
   border-radius: 5px;
+  z-index: 5;
 }
-article .article__organisation .vignette__restaurant__card img {
-  object-fit: cover;
+article .article__organisation .restaurant__vignette__card a {
   width: 100%;
-  height: 75%;
+  height: 70%;
   margin-top: -30px;
-  border-radius: 18px 18px 0 0;
 }
-article .article__organisation .vignette__restaurant__card .vignette__restaurant__text {
+article .article__organisation .restaurant__vignette__card a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px 0 10px;
+  padding: 15px 10px 0 10px;
   height: 20%;
 }
-article .article__organisation .vignette__restaurant__card .vignette__restaurant__icone #heart--light {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone #heart--light {
   font-size: 1.1em;
   position: relative;
   cursor: pointer;
   opacity: 1;
   top: 15px;
 }
-article .article__organisation .vignette__restaurant__card .vignette__restaurant__icone #heart--full {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone #heart--full {
   position: relative;
   cursor: pointer;
   opacity: 0;
   bottom: 7px;
   right: 2px;
 }
-article .article__organisation .vignette__restaurant__card .vignette__restaurant__icone:hover #heart--full {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:hover #heart--full {
   animation-name: heart-fading--full;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
-article .article__organisation .vignette__restaurant__card .vignette__restaurant__icone:hover #heart--light {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:hover #heart--light {
   animation-name: heart-fading--light;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
-article .article__organisation .vignette__restaurant__card .vignette__restaurant__icone:active {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:active {
   animation-name: animation__active--full;
   animation-duration: 100ms;
   animation-fill-mode: both;
 }
-article .article__organisation .vignette__restaurant {
+article .article__organisation .restaurant__vignette__withoutcard {
+  width: 100%;
   min-width: 300px;
   max-width: 400px;
   height: 200px;
   display: flex;
-  justify-items: center;
-  box-sizing: content-box;
-  flex-direction: column;
   margin: 15px;
+  flex-direction: column;
+  box-sizing: content-box;
   padding: 0;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: none;
-  transition: all;
 }
-article .article__organisation .vignette__restaurant img {
-  object-fit: cover;
+article .article__organisation .restaurant__vignette__withoutcard a {
   width: 100%;
-  height: 75%;
-  border-radius: 18px 18px 0 0;
+  height: 70%;
 }
-article .article__organisation .vignette__restaurant .vignette__restaurant__text {
+article .article__organisation .restaurant__vignette__withoutcard a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px 0 10px;
+  padding: 15px 10px 0 10px;
   height: 20%;
   height: 20%;
 }
-article .article__organisation .vignette__restaurant .vignette__restaurant__icone #heart--light {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone #heart--light {
   font-size: 1.1em;
   position: relative;
   cursor: pointer;
   opacity: 1;
   top: 15px;
 }
-article .article__organisation .vignette__restaurant .vignette__restaurant__icone #heart--full {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone #heart--full {
   position: relative;
   cursor: pointer;
   opacity: 0;
   bottom: 7px;
   right: 2px;
 }
-article .article__organisation .vignette__restaurant .vignette__restaurant__icone:hover #heart--full {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:hover #heart--full {
   animation-name: heart-fading--full;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
-article .article__organisation .vignette__restaurant .vignette__restaurant__icone:hover #heart--light {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:hover #heart--light {
   animation-name: heart-fading--light;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
-article .article__organisation .vignette__restaurant .vignette__restaurant__icone:active {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:active {
   animation-name: animation__active--full;
   animation-duration: 100ms;
   animation-fill-mode: both;

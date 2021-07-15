@@ -6,7 +6,6 @@
 @import "./layout/BEM_elements.scss";
 @import "./utils/keyframes.scss";
 
-
 /* LOADER */
 
 .loader__background {
@@ -24,20 +23,6 @@
         h1 {
             font-size: 1em;
             color: white; 
-            &::before {
-                content:""; 
-                display:block;
-                height: 10px;
-                margin-bottom: 55px;
-                @include loader__barre;
-            }    
-            &::after {
-                content:""; 
-                display:block;
-                height: 10px;
-                margin-top: 70px;
-                @include loader__barre;
-            }
             span {
                 margin: 2px;
                 transform: scale(1);
@@ -58,7 +43,6 @@
 }
 
 header {
-
     .Menu__lien {
         display: none;
     }
@@ -69,16 +53,22 @@ header {
 .localisation{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     height: 50px;
     width: 100%;
     background-color: $dark-background;
     box-shadow: inset 0px 5px 6px -5px black;
-    h3 {
-        font-size: 90%;
-        i {
-            padding: 0 10px 0 0;
-        }
+    i {
+        padding:2px;
+    }
+    input {
+        box-sizing: content-box;
+        font-weight: 500;
+        font-size: 1em;
+        background: $dark-background;
+        text-align: center;
+        margin-left: 2px;
+        outline-style: none;
     }
 }
 
@@ -135,7 +125,7 @@ aside
             align-items: center;
             width: 95%;
             max-width: 400px;
-            height: 50px;
+            height: 60px;
             margin: 10px;
             @include vignette__border--color($light-background);
             &:hover {
@@ -178,38 +168,35 @@ article{
     }
     .article__organisation {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
+        flex-wrap: wrap;
         width: 100%;
-        .vignette__restaurant__card {
-            min-width: 300px;
-            max-width: 400px;
-            height: 200px;
-            display: flex;
-            justify-items: center;
-            box-sizing: content-box;
-            flex-direction: column;
-            margin: 15px;
-            padding: 0;
-            @include vignette__border--color($white-background);
+        .restaurant__vignette__card {
+            @include vignette__restaurant;
             &::before {
                 @include card_nouveau;
+                z-index: 5;
             }
-            & img{
-                object-fit: cover;
+            a{
                 width: 100%;
-                height: 75%;
+                height: 70%;
                 margin-top: -30px;
-                border-radius: 18px 18px 0 0;
+                img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px 15px 0 0;
+                object-fit: cover;
+                }
+
             }
-            .vignette__restaurant__text {
+            .restaurant__vignette__text {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding:5px 10px 0 10px;
+                padding:15px 10px 0 10px;
                 height: 20%;
             }
-            .vignette__restaurant__icone {
+            .restaurant__vignette__icone {
                 #heart--light {
                     font-size: 1.1em;
                     position: relative;
@@ -232,32 +219,36 @@ article{
                 }
             }
         }
-        .vignette__restaurant {
+        .restaurant__vignette__withoutcard {
+            width: 100%;
             min-width: 300px;
             max-width: 400px;
             height: 200px;
             display: flex;
-            justify-items: center;
-            box-sizing: content-box;
-            flex-direction: column;
             margin: 15px;
+            flex-direction: column ;
+            box-sizing: content-box;
             padding: 0;
             @include vignette__border--color($white-background);
-            & img{
-                object-fit: cover;
+            a{
                 width: 100%;
-                height: 75%;
-                border-radius: 18px 18px 0 0;
+                height: 70%;
+                img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px 15px 0 0;
+                object-fit: cover;
+                }
             }
-            .vignette__restaurant__text {
+            .restaurant__vignette__text {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding:5px 10px 0 10px;
+                padding:15px 10px 0 10px;
                 height: 20%;
                 height: 20%;
             }
-            .vignette__restaurant__icone {
+            .restaurant__vignette__icone {
                 #heart--light {
                     font-size: 1.1em;
                     position: relative;
@@ -282,5 +273,3 @@ article{
         }
     }
 }
-
-
