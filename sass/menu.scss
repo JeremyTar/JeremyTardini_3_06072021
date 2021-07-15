@@ -38,7 +38,7 @@ article {
                 font-size: 130%;
             }
             .variation__vignette {
-                #heart--light {
+                i {
                     font-size: 2em;
                     position: relative;
                     cursor: pointer;
@@ -46,7 +46,7 @@ article {
                     top: 20px;
 
                 }
-                #heart--full {
+                svg {
                     position: relative;
                     cursor: pointer;
                     opacity: 0;

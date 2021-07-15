@@ -1,14 +1,26 @@
 
 /* LOADER MENU */
-
-@mixin loader__barre {
-    border-radius: 15px;
-    animation: animation__gradient__color 2s ease infinite;
+@mixin mouvement__lettre {
+    margin: 2px;
+    transform: scale(1);
+    @include titre__logo;
+    text-shadow: 0 0px $primaire-color, 0 0px $secondaire-color;
+    transform: translate(0, 50%) rotate(4deg);
+    animation: jump__shadow 3s ease-in-out infinite;
+    display: inline-block;
+    @for $i from 1 through 8 {
+        &:nth-child(#{$i}) 
+        {
+          animation-delay: 220ms * $i;
+        }
+    }
 }
 
-@mixin loader__sortie{
-    animation: loader__sortie 1s ease forwards 5s;
+@mixin loader__sortie {
+    animation: loader__sortie 1s ease forwards 4s;
 }
+
+
 
 /* MIXINS OUTILS */
 
@@ -128,16 +140,17 @@
 /* MIXIN ANNIMATION HEART */ 
 
 @mixin animation--heart {
-    #heart--full {
-        animation-name: heart-fading--full;
-        animation-duration: 0.3s;
-        animation-fill-mode: forwards;
-    }
-    #heart--light {
+    i {
         animation-name: heart-fading--light;
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
     }
+    svg {
+        animation-name: heart-fading--full;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
 }
 @mixin heart--full--active{
     animation-name: animation__active--full;
