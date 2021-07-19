@@ -501,7 +501,7 @@ article .article__organisation .restaurant__vignette__card .restaurant__vignette
 }
 article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:hover svg {
   animation-name: heart-fading--full;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:active {
@@ -563,7 +563,7 @@ article .article__organisation .restaurant__vignette__withoutcard .restaurant__v
 }
 article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:hover svg {
   animation-name: heart-fading--full;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:active {

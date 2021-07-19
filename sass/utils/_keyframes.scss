@@ -47,11 +47,14 @@
   }
 
   @keyframes heart-fading--light {
-      from {
+      0% {
         opacity: 1;
       }
-      to {
-        opacity: 0;
+      50% {
+        opacity: 1;
+      }
+      100% {
+          opacity: 0;
       }
   }
 

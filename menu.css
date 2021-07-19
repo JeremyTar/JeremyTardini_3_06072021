@@ -121,10 +121,13 @@ input {
   }
 }
 @keyframes heart-fading--light {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  50% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -339,12 +342,12 @@ article .menu__titre .variation__vignette svg {
 }
 article .menu__titre .variation__vignette:hover i {
   animation-name: heart-fading--light;
-  animation-duration: 0.3s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 article .menu__titre .variation__vignette:hover svg {
   animation-name: heart-fading--full;
-  animation-duration: 0.3s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
 article .menu__titre .variation__vignette:active {

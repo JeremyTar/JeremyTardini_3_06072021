@@ -142,12 +142,12 @@
 @mixin animation--heart {
     i {
         animation-name: heart-fading--light;
-        animation-duration: 0.3s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
     }
     svg {
         animation-name: heart-fading--full;
-        animation-duration: 0.3s;
+        animation-duration: 0.8s;
         animation-fill-mode: forwards;
     }
 
