@@ -31,13 +31,13 @@ body {
 }
 
 h1 {
-  font-family: "Roboto--Bold";
+  font-family: "Shrikhand";
   font-size: 2em;
 }
 
 h2 {
-  font-family: "Roboto--Medium";
-  font-size: 1em;
+  font-family: "Roboto--Bold";
+  font-size: 2em;
 }
 
 h3 {
@@ -94,7 +94,6 @@ header a {
 }
 header h1 {
   font-family: "Shrikhand";
-  font-size: 2.5em;
   font-weight: 500;
   text-align: center;
   margin: 10px 0 10px 0;
@@ -108,7 +107,7 @@ footer {
   color: white;
 }
 @media screen and (min-width: 768px) {
-  footer h1 {
+  footer strong {
     display: flex;
     text-align: center;
     justify-content: space-around;
@@ -122,9 +121,8 @@ footer {
     justify-content: space-around;
   }
 }
-footer h1 {
+footer p {
   font-family: "Shrikhand";
-  font-size: 2.5em;
   font-weight: 500;
   font-size: 1.5em;
   padding: 15px 0 10px 15px;
@@ -192,11 +190,24 @@ footer ul li i {
   }
 }
 @keyframes heart-fading--light {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  50% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
+  }
+}
+@keyframes heart-fading--full {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes animation__active--full {
@@ -251,43 +262,47 @@ footer ul li i {
   justify-content: center;
   animation: loader__sortie 1s ease forwards 4s;
 }
-.loader__background #loader__animation h1 {
-  font-size: 1em;
+.loader__background #loader__animation .letters {
+  font-size: 2.5em;
   color: white;
 }
-.loader__background #loader__animation h1 span {
+@media screen and (max-width: 425px) {
+  .loader__background #loader__animation .letters {
+    font-size: 1.5em;
+  }
+}
+.loader__background #loader__animation .letters span {
   margin: 2px;
   transform: scale(1);
   font-family: "Shrikhand";
-  font-size: 2.5em;
   font-weight: 500;
   text-shadow: 0 0px #9356DC, 0 0px #FF79DA;
   transform: translate(0, 50%) rotate(4deg);
   animation: jump__shadow 3s ease-in-out infinite;
   display: inline-block;
 }
-.loader__background #loader__animation h1 span:nth-child(1) {
+.loader__background #loader__animation .letters span:nth-child(1) {
   animation-delay: 220ms;
 }
-.loader__background #loader__animation h1 span:nth-child(2) {
+.loader__background #loader__animation .letters span:nth-child(2) {
   animation-delay: 440ms;
 }
-.loader__background #loader__animation h1 span:nth-child(3) {
+.loader__background #loader__animation .letters span:nth-child(3) {
   animation-delay: 660ms;
 }
-.loader__background #loader__animation h1 span:nth-child(4) {
+.loader__background #loader__animation .letters span:nth-child(4) {
   animation-delay: 880ms;
 }
-.loader__background #loader__animation h1 span:nth-child(5) {
+.loader__background #loader__animation .letters span:nth-child(5) {
   animation-delay: 1100ms;
 }
-.loader__background #loader__animation h1 span:nth-child(6) {
+.loader__background #loader__animation .letters span:nth-child(6) {
   animation-delay: 1320ms;
 }
-.loader__background #loader__animation h1 span:nth-child(7) {
+.loader__background #loader__animation .letters span:nth-child(7) {
   animation-delay: 1540ms;
 }
-.loader__background #loader__animation h1 span:nth-child(8) {
+.loader__background #loader__animation .letters span:nth-child(8) {
   animation-delay: 1760ms;
 }
 
@@ -329,7 +344,7 @@ header .Menu__lien {
   background-color: #F0F0F0;
   padding: 25px 10px 25px 10px;
 }
-.section__information h1 {
+.section__information h2 {
   display: flex;
   justify-content: space-around;
   margin: 10px 0 10px 0;
@@ -366,9 +381,10 @@ header .Menu__lien {
 aside {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 20px 0 20px 0;
 }
-aside h1 {
+aside h2 {
   width: 90%;
   margin: auto;
 }
@@ -377,17 +393,31 @@ aside .fonctionnement {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+@media screen and (min-width: 1024px) {
+  aside .fonctionnement {
+    width: 90%;
+  }
+}
 aside .fonctionnement .fonctionnement__row {
   display: flex;
   align-items: center;
   width: 95%;
-  max-width: 400px;
   height: 60px;
   margin: 10px;
   border-radius: 15px;
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: #F0F0F0;
   border: none;
+}
+@media screen and (max-width: 959px) {
+  aside .fonctionnement .fonctionnement__row {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 960px) {
+  aside .fonctionnement .fonctionnement__row {
+    max-width: 280px;
+  }
 }
 aside .fonctionnement .fonctionnement__row:hover {
   background-color: #d7d7d7;
@@ -396,7 +426,7 @@ aside .fonctionnement .fonctionnement__row:hover {
 aside .fonctionnement .fonctionnement__row:hover i {
   color: #9356DC;
 }
-aside .fonctionnement .fonctionnement__row p {
+aside .fonctionnement .fonctionnement__row .pastille {
   width: 18px;
   height: 18px;
   display: flex;
@@ -414,8 +444,11 @@ aside .fonctionnement .fonctionnement__row i {
   font-size: 1.1em;
   padding-left: 15px;
 }
-aside .fonctionnement .fonctionnement__row h2 {
+aside .fonctionnement .fonctionnement__row .fonctionnement__row__description {
   margin: 15px;
+  color: black;
+  font-size: 1em;
+  font-family: "Roboto--Medium";
 }
 
 article {
@@ -480,28 +513,32 @@ article .article__organisation .restaurant__vignette__card .restaurant__vignette
   padding: 15px 10px 0 10px;
   height: 20%;
 }
-article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone i {
-  font-size: 1.1em;
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone .light {
+  font-size: 1.2em;
   position: relative;
   cursor: pointer;
   opacity: 1;
-  top: 15px;
+  left: 13px;
 }
-article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone svg {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone .full {
   position: relative;
   cursor: pointer;
   opacity: 0;
-  bottom: 7px;
-  right: 2px;
+  right: 10px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 1.2em;
 }
-article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:hover i {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:hover .light {
   animation-name: heart-fading--light;
-  animation-duration: 0.3s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:hover svg {
+article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:hover .full {
   animation-name: heart-fading--full;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
 article .article__organisation .restaurant__vignette__card .restaurant__vignette__icone:active {
@@ -542,28 +579,32 @@ article .article__organisation .restaurant__vignette__withoutcard .restaurant__v
   height: 20%;
   height: 20%;
 }
-article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone i {
-  font-size: 1.1em;
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone .light {
+  font-size: 1.2em;
   position: relative;
   cursor: pointer;
   opacity: 1;
-  top: 15px;
+  left: 13px;
 }
-article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone svg {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone .full {
   position: relative;
   cursor: pointer;
   opacity: 0;
-  bottom: 7px;
-  right: 2px;
+  right: 10px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 1.2em;
 }
-article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:hover i {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:hover .light {
   animation-name: heart-fading--light;
-  animation-duration: 0.3s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:hover svg {
+article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:hover .full {
   animation-name: heart-fading--full;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
 article .article__organisation .restaurant__vignette__withoutcard .restaurant__vignette__icone:active {

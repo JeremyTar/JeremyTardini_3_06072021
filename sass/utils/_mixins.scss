@@ -140,12 +140,12 @@
 /* MIXIN ANNIMATION HEART */ 
 
 @mixin animation--heart {
-    i {
+    .light {
         animation-name: heart-fading--light;
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
-    svg {
+    .full {
         animation-name: heart-fading--full;
         animation-duration: 0.8s;
         animation-fill-mode: forwards;
@@ -177,7 +177,7 @@
 
 @mixin footer__responsiv {
     @media screen and (min-width: 768px) {
-        h1 {
+        strong {
             display: flex;
             text-align: center;
             justify-content: space-around;
@@ -250,6 +250,5 @@
 
 @mixin titre__logo {
     font-family: "Shrikhand";
-    font-size: 2.5em;
     font-weight: 500;
 }

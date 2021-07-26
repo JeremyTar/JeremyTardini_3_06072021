@@ -31,13 +31,13 @@ body {
 }
 
 h1 {
-  font-family: "Roboto--Bold";
+  font-family: "Shrikhand";
   font-size: 2em;
 }
 
 h2 {
-  font-family: "Roboto--Medium";
-  font-size: 1em;
+  font-family: "Roboto--Bold";
+  font-size: 2em;
 }
 
 h3 {
@@ -131,6 +131,16 @@ input {
     opacity: 0;
   }
 }
+@keyframes heart-fading--full {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @keyframes animation__active--full {
   0% {
     transform: scale(1);
@@ -186,7 +196,6 @@ header a {
 }
 header h1 {
   font-family: "Shrikhand";
-  font-size: 2.5em;
   font-weight: 500;
   text-align: center;
   margin: 10px 0 10px 0;
@@ -200,7 +209,7 @@ footer {
   color: white;
 }
 @media screen and (min-width: 768px) {
-  footer h1 {
+  footer strong {
     display: flex;
     text-align: center;
     justify-content: space-around;
@@ -214,9 +223,8 @@ footer {
     justify-content: space-around;
   }
 }
-footer h1 {
+footer p {
   font-family: "Shrikhand";
-  font-size: 2.5em;
   font-weight: 500;
   font-size: 1.5em;
   padding: 15px 0 10px 15px;
@@ -241,14 +249,15 @@ footer ul li i {
   width: 20px;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-}
-article img {
+.banniere img {
   object-fit: cover;
   width: 100%;
   height: 250px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
 }
 article .menu {
   display: flex;
@@ -320,32 +329,35 @@ article .menu__titre {
     width: 50%;
   }
 }
-article .menu__titre h1 {
+article .menu__titre h2 {
   font-family: "Shrikhand";
-  font-size: 2.5em;
   font-weight: 500;
   font-size: 130%;
 }
-article .menu__titre .variation__vignette i {
+article .menu__titre .variation__vignette .light {
   font-size: 2em;
   position: relative;
   cursor: pointer;
   opacity: 1;
-  top: 20px;
+  left: 20px;
 }
-article .menu__titre .variation__vignette svg {
+article .menu__titre .variation__vignette .full {
   position: relative;
   cursor: pointer;
   opacity: 0;
-  bottom: 14px;
-  right: 2px;
+  right: 16px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 2em;
 }
-article .menu__titre .variation__vignette:hover i {
+article .menu__titre .variation__vignette:hover .light {
   animation-name: heart-fading--light;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-article .menu__titre .variation__vignette:hover svg {
+article .menu__titre .variation__vignette:hover .full {
   animation-name: heart-fading--full;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
@@ -355,21 +367,25 @@ article .menu__titre .variation__vignette:active {
   animation-duration: 100ms;
   animation-fill-mode: both;
 }
+@media screen and (min-width: 1024px) {
+  article .menu .menu__organisation {
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
 article .menu .menu__organisation .menu__block {
   width: 90%;
   max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+  margin: 30px auto;
 }
-article .menu .menu__organisation .menu__block h2 {
+article .menu .menu__organisation .menu__block h3 {
   font-size: 90%;
   font-weight: 500;
   margin: 10px 0 10px 0;
   display: flex;
   flex-direction: column;
 }
-article .menu .menu__organisation .menu__block h2::after {
+article .menu .menu__organisation .menu__block h3::after {
   content: "";
   width: 35px;
   height: 3px;
@@ -383,7 +399,7 @@ article .menu .menu__organisation .menu__block__vignette {
   box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: none;
-  margin: 5px 0 5px 0;
+  margin: 10px 0 10px 0;
   display: flex;
   cursor: pointer;
   width: 100%;

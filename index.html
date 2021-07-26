@@ -12,7 +12,7 @@
 
     <div class=loader__background>
         <div id="loader__animation">
-            <h1>
+            <div class="letters">
                 <span class="letter01">o</span>
                 <span class="letter02">h</span>
                 <span class="letter03">m</span>
@@ -22,7 +22,7 @@
                 <span class="letter07">o</span>
                 <span class="letter08">d</span>
 
-            </h1>
+            </div>
         </div>
     </div>
 
@@ -42,7 +42,7 @@
             <input type="text" class="search" name="recherche" placeholder="Paris, Belleville"/>
         </div>
         <div class="section__information">
-            <h1>Réservez le menu qui vous convient</h1>
+            <h2>Réservez le menu qui vous convient</h2>
             <h4>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h4>
             <a href="#restaurant">Explorer nos restaurants</a>
         </div>
@@ -51,22 +51,22 @@
 <!-- ASIDE DESCRIPTIF/INFORMATION -->
 
     <aside id="restaurant">
-        <h1>Fonctionnement</h1>
+        <h2>Fonctionnement</h2>
         <div class="fonctionnement">
             <div class="fonctionnement__row">
-                <p>1</p>
+                <p class="pastille">1</p>
                 <i class="fas fa-mobile-alt"></i>
-                <h2>Choisissez un restaurants</h2>
+                <p class="fonctionnement__row__description">Choisissez un restaurants</p>
             </div>
             <div class="fonctionnement__row">
-                <p>2</p>
+                <p class="pastille">2</p>
                 <i class="fas fa-list"></i>
-                <h2>Composez votre menu</h2>
+                <p class="fonctionnement__row__description">Composez votre menu</p>
             </div>
                 <div class="fonctionnement__row">
-                <p>3</p>
+                <p class="pastille">3</p>
                 <i class="fas fa-store"></i>
-                <h2>Dégustez au restaurant</h2>
+                <p class="fonctionnement__row__description">Dégustez au restaurant</p>
             </div>
         </div>
     </aside>
@@ -74,7 +74,7 @@
     <!--  VIGNETTE RESTAURANT -->
 
     <article>
-        <h1>Restaurants</h1>
+        <h2>Restaurants</h2>
         <div class="article__organisation">
             <div class="restaurant__vignette__card">
                 <a href="page_html/La_palette_du_goût.html">
@@ -86,14 +86,8 @@
                         <h4>Ménilmontant</h4>
                     </div>
                     <div class="restaurant__vignette__icone">
-                        <i id="heart--light" class="far fa-heart"></i>
-                        <svg id="heart--full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" viewBox="0 0 512 512">
-                            <linearGradient id="gradient1">
-                                <stop offset="0%" stop-color="rgba(255,121,218,1)" />
-                                <stop offset="100%" stop-color="rgba(147,86,220,1)" />
-                            </linearGradient>
-                            <path xmlns="http://www.w3.org/2000/svg"  fill ="url(#gradient1)" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>                    
-                        </svg>
+                        <i class="far fa-heart light"></i>
+                        <i class="fas fa-heart full"></i>
                     </div>
                 </div>
             </div>
@@ -107,14 +101,8 @@
                         <h4>Charonne</h4>
                     </div>
                     <div class="restaurant__vignette__icone">
-                        <i class="far fa-heart"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" viewBox="0 0 512 512">
-                            <linearGradient id="gradient2">
-                                <stop offset="0%" stop-color="rgba(255,121,218,1)" />
-                                <stop offset="100%" stop-color="rgba(147,86,220,1)" />
-                            </linearGradient>
-                            <path xmlns="http://www.w3.org/2000/svg"  fill ="url(#gradient2)" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>                    
-                        </svg>
+                        <i class="far fa-heart light"></i>
+                        <i class="fas fa-heart full"></i>
                     </div>
                 </div>
             </div>
@@ -128,14 +116,8 @@
                         <h4>Cité Rouge</h4>
                     </div>
                     <div class="restaurant__vignette__icone">
-                        <i class="far fa-heart"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" viewBox="0 0 512 512">
-                            <linearGradient id="gradient3">
-                                <stop offset="0%" stop-color="rgba(255,121,218,1)" />
-                                <stop offset="100%" stop-color="rgba(147,86,220,1)" />
-                            </linearGradient>
-                            <path xmlns="http://www.w3.org/2000/svg"  fill ="url(#gradient3)" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>                    
-                        </svg>
+                        <i class="far fa-heart light"></i>
+                        <i class="fas fa-heart full"></i>
                     </div>
                 </div>
             </div>
@@ -149,14 +131,8 @@
                         <h4>Folie-Méricourt</h4>
                     </div>
                     <div class="restaurant__vignette__icone">
-                        <i class="far fa-heart"></i>
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="true" data-prefix="far"  class="svg-inline--fa fa- fa-w-16" viewBox="0 0 512 512">
-                            <linearGradient id="gradient4">
-                                <stop offset="0%" stop-color="rgba(255,121,218,1)" />
-                                <stop offset="100%" stop-color="rgba(147,86,220,1)" />
-                            </linearGradient>
-                            <path xmlns="http://www.w3.org/2000/svg"  fill ="url(#gradient4)" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/>                    
-                        </svg>
+                        <i class="far fa-heart light"></i>
+                        <i class="fas fa-heart full"></i>
                     </div>
                 </div>
             </div>
@@ -166,7 +142,7 @@
 <!-- FOOTER -->
 
     <footer>
-        <h1>ohmyfood</h1>
+        <p>ohmyfood</p>
         <ul>
             <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
             <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
