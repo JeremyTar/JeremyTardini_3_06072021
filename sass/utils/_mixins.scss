@@ -127,12 +127,9 @@
 
 @mixin hidden__menu--hover {
     .hiden__menu {
-        transition: 0.4s;
-        width: 100px;
-        opacity: 1;
+        animation: vignette__menu 0.4s ease forwards;
         i {
-            transform: rotate(360deg);
-            transition: 0.5s;
+        animation: rotation__icone 0.5s ease forwards;
         }
     }
 }
@@ -159,6 +156,19 @@
 }
 
 /* MIXIN RESPONSIV */
+@mixin alignement_text {
+    @media screen and (min-width:1024px) {
+        width: 90%;
+        
+    }
+    @media screen and (max-width: 1023px) and (min-width:426px) {
+        text-align: center ;
+        width : 100%
+    }
+    @media screen and (max-width: 425px) {
+        width: 95%;
+    }
+}
 
 
 /* responsiv title - icone menu */

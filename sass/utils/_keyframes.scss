@@ -11,25 +11,23 @@
     }
 }
 
-@keyframes apparition__restaurant__left {
+@keyframes vignette__menu {
     0% {
-        transform: translateX(-30px);
+        width: 0px;
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        width: 100px;
         opacity: 1;
     }
 }
 
-@keyframes apparition__restaurant__right {
+@keyframes rotation__icone {
     0% {
-        transform: translateX(30px);
-        opacity: 0;
+        transform: rotate(0)
     }
     100% {
-        transform: translateX(0);
-        opacity: 1;
+        transform: rotate(360deg);
     }
 }
 
